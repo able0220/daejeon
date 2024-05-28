@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+}
+
+.panel {
+    height: 100%; /* 높이를 컨테이너 높이에 맞춤 */
+    display: flex;
+    justify-content: center; /* 내용을 중앙 정렬 */
+    align-items: center;
+}
+
+
+
+
+
+
+#left-panel, #right-panel {
+    width: 50%; /* 각 패널 너비를 50%로 설정 */
+    padding: 0 10px; /* 패널 내부에 약간의 패딩을 추가 */
+}
+
+#first-image {
+    width: 100%; /* 이미지를 패널 너비에 맞게 조정 */
+    height: auto; /* 이미지 높이를 자동으로 조정하여 비율 유지 */
+    object-fit: cover; /* 패널 크기에 맞게 이미지를 채움 */
+}
+
+#webcam-container {
+    width: 100%; /* 웹캠 컨테이너 너비를 패널 너비에 맞게 조정 */
+    height: 100%; /* 웹캠 컨테이너 높이를 패널 높이에 맞게 조정 */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#indicator-container {
+    position: absolute;
+    bottom: 100px; /* 이 값을 조정하여 인디케이터의 위치를 높이세요 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+#label-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px; /* 필요에 따라 이 값을 조정하여 라벨 컨테이너의 위치를 조절하세요 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.9); /* 배경색 추가로 가독성 향상 */
+}
+
+
+#startPrompt {
+    text-align: center;
+    color: #333; /* 텍스트 색상 조정 */
+    font-size: 16px; /* 텍스트 크기 조정 */
+    padding: 10px 0; /* 상하 패딩 추가 */
+}
