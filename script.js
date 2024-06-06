@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         statusElement.innerHTML = "녹음 중...";
         statusElement.className = 'recording';
-        startImage.src = "main/main-2.jpg"; // 이미지 변경
+        startImage.src = "main/main-2.gif"; // 이미지 변경
 
         if (!recognizer) {
             recognizer = await createModel();
