@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // 각 레이블 및 스코어 출력
         classLabels.forEach((label, i) => {
             const classPrediction = label + ": " + scores[i].toFixed(2);
-            labelContainer.innerHTML += '<div>' + classPrediction + '</div>'; // 예측 결과 출력
+    //        labelContainer.innerHTML += '<div>' + classPrediction + '</div>'; // 예측 결과 출력
 
             if (scores[i] > 0.8) {
                 if (label === 'Class 2') {
