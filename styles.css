@@ -34,8 +34,8 @@ body, html {
 }
 
 #first-image {
-    width: 100%; /* 이미지를 패널 너비에 맞게 조정 */
-    height: auto; /* 이미지 높이를 자동으로 조정하여 비율 유지 */
+    width: auto; /* 이미지를 패널 너비에 맞게 조정 */
+    height: 323px; /* 이미지 높이를 자동으로 조정하여 비율 유지 */
     object-fit: cover; /* 패널 크기에 맞게 이미지를 채움 */
 }
 

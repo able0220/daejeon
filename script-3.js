@@ -80,8 +80,8 @@ function addMessage(message) {
 
 
 async function init() {
-    const modelURL = 'https://teachablemachine.withgoogle.com/models/uxq5kjAFp/model.json';
-    const metadataURL = 'https://teachablemachine.withgoogle.com/models/uxq5kjAFp/metadata.json';
+    const modelURL = 'https://teachablemachine.withgoogle.com/models/nozp-LX8W/model.json';
+    const metadataURL = 'https://teachablemachine.withgoogle.com/models/nozp-LX8W/metadata.json';
 
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();

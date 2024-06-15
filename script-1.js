@@ -12,7 +12,13 @@ async function predict() {
     if (labelContainer.children[0]) {
         labelContainer.children[0].innerHTML = "";  // 기존 내용을 초기화
     }
-
+   /*
+    for (let i = 0; i < maxPredictions; i++) {
+        const classPrediction =
+            prediction[i].className + ": " + prediction[i].probability.toFixed(2);
+        labelContainer.childNodes[i].innerHTML = classPrediction;
+    }
+*/
     // 예측된 각 클래스의 확률에 따라 불이 들어오는 원의 개수 및 메시지를 설정
     for (let i = 0; i < maxPredictions; i++) {
         const probability = prediction[i].probability.toFixed(2);
@@ -36,6 +42,8 @@ async function predict() {
             }
         }
     }
+
+
 }
 
 
@@ -68,8 +76,8 @@ document.getElementById('controlButton').addEventListener('click', function() {
 
 
 async function init() {
-    const modelURL = 'https://teachablemachine.withgoogle.com/models/LIIxld7W1/model.json';
-    const metadataURL = 'https://teachablemachine.withgoogle.com/models/LIIxld7W1/metadata.json';
+    const modelURL = 'https://teachablemachine.withgoogle.com/models/phUDOoA0Y/model.json';
+    const metadataURL = 'https://teachablemachine.withgoogle.com/models/phUDOoA0Y/metadata.json';
 
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
