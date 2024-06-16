@@ -31,7 +31,7 @@ body, html {
 #left-panel, #right-panel {
     width: 50%; /* 각 패널 너비를 50%로 설정 */
     padding: 0 10px; /* 패널 내부에 약간의 패딩을 추가 */
-    margin-right: 25px; /* 왼쪽 패널의 오른쪽에 마진 추가 */
+    margin-right: 75px; /* 왼쪽 패널의 오른쪽에 마진 추가 */
 }
 
 #first-image {
