@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     case 'Class 5': window.location.href = '4. fourth.html'; break;
                     case 'Class 6': window.location.href = '5. fifth.html'; break;
                 }
-                stopRecording = true;
+            
             }
         });
 

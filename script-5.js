@@ -1,4 +1,5 @@
 let model, webcam, maxPredictions, labelContainer, indicatorCircles;
+let isPlaying = true;  // 웹캠이 현재 재생 중인지 추적하는 플래그
 
 async function predict() {
     const prediction = await model.predict(webcam.canvas);
@@ -13,8 +14,7 @@ async function predict() {
     if (labelContainer.children[0]) {
         labelContainer.children[0].innerHTML = "";  // 기존 내용을 초기화
     }
-
-    // 예측된 각 클래스의 확률에 따라 불이 들어오는 원의 개수 및 메시지를 설정
+    
     for (let i = 0; i < maxPredictions; i++) {
         const probability = prediction[i].probability.toFixed(2);
         if (i === 0) {  // 클래스 0에 대한 조건만 확인
@@ -39,8 +39,17 @@ async function predict() {
     }
 }
 
+function fillCircles(count) {
+    for (let i = 0; i < count; i++) {
+        indicatorCircles[i].style.backgroundColor = "blue";  // 파란색으로 변경
+    }
+}
 
-let isPlaying = true;  // 웹캠이 현재 재생 중인지 추적하는 플래그
+function addMessage(message) {
+    if (labelContainer.children[0]) {
+        labelContainer.children[0].innerHTML = message;  // 메시지 추가
+    }
+}
 
 document.getElementById('controlButton').addEventListener('click', function() {
     if (isPlaying) {
@@ -54,15 +63,9 @@ document.getElementById('controlButton').addEventListener('click', function() {
     }
 });
 
-
-
-
-
-
-
 async function init() {
-    const modelURL = 'https://teachablemachine.withgoogle.com/models/RtyMtYlXe/model.json';
-    const metadataURL = 'https://teachablemachine.withgoogle.com/models/RtyMtYlXe/metadata.json';
+    const modelURL = 'https://teachablemachine.withgoogle.com/models/DOJFtYfGg/model.json';
+    const metadataURL = 'https://teachablemachine.withgoogle.com/models/DOJFtYfGg/metadata.json';
 
     model = await tmImage.load(modelURL, metadataURL);
     maxPredictions = model.getTotalClasses();
